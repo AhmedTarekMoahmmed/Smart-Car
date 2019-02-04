@@ -1,0 +1,519 @@
+CDD
+
+
+Version:	V0.0
+Updated by:	Ahmed Tarek
+History:	2/3/2019
+
+
+Version:	V0.1
+Updated by:	Nada
+History:	2/3/2019
+
+
+Version:	V0.2
+Updated by:	Bassem
+History:	2/3/2019
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> SET PIN DIRECTION
+Description: set pin Direction
+Inputs : u8 u8PinNB     : pin Number
+ : u8 u8Direction : if it DIO_INPUT_LOW mean that this pin is input , if it   DIO_INPUT_HOGH mean that this pin is output
+Outputs: Error state
+
+
+u8 DIO_u8SetPinDirection(u8 u8PinNB,u8 u8Direction);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+==> SET PIN VALUE
+Description: set pin value
+Inputs : u8 u8PinNB     : pin Number
+ : u8 u8Value  : if it DIO_LOW mean that this pin is low , if it DIO _HOGH mean that this pin is high
+Outputs: Error state
+
+
+u8 DIO_u8SetPinValue(u8 u8PinNB,u8 u8Value);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+==> GET PIN VALUE
+Description: GET pin value
+Inputs : u8 u8PinNB     : pin Number
+ 	 : u8* u8Value  : pointer to value which it may be high (1) or low (0)
+ Outputs: Error state
+Outputs: Error state
+
+
+u8 DIO_u8GetPinValue(u8 u8PinNB,u8* u8Value);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> SET MOTOR SPEED AND DIRECTION
+Description: SET MOTOR SPEED AND DIRECTION
+Inputs : u8 u8Speed    : value to control the speed
+: u8 u8Dirctio: to set the direction of the motor (anticlockwise) or (clockwise)
+Outputs: Error state
+
+
+u8 MOTOR_u8ControlSpeedDirection(u8 u8Dirctio,u8 u8Speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+==> MOVE FORWARD 
+Description: set two motor to move in same speed and the same direction (clockwise)
+Inputs : u8 u8Speed    : value to control the speed
+Outputs: Error state
+
+
+u8 CAR_u8MoveForward(u8 u8Speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+==> MOVE BACK 
+Description: set two motor to move in same speed and the same direction (Anticlockwise)
+Inputs : u8 u8Speed    : value to control the speed
+Outputs: Error state
+
+
+u8 CAR_u8MoveBcak(u8 u8Speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+==> MOVE RIGHT 
+Description: set each motor with different speed in same direction M1(Right) M2(left) 
+Inputs : u8 u8Speed    : value to control the speed
+Outputs: Error state
+
+
+u8 CAR_u8MoveRight(u8 u8Speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> MOVE LEFT 
+Description: set each motor with different speed in same direction M1(Right) M2(left) 
+Inputs : u8 u8Speed    : value to control the speed
+Outputs: Error state
+
+
+u8 CAR_u8MoveLeft(u8 u8Speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> STOP 
+Description: set each motor with speed zero to stop the car  
+Inputs : u8 u8Speed    : value to control the speed
+Outputs: Error state
+
+
+u8 CAR_u8Stop(u8 u8Speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> Initialize LED 
+Description: Initialize LED
+Inputs : void    
+Outputs: Error state
+
+
+u8 LED_Init(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> Turns LED on
+Description: Turns LED on
+Inputs : void    
+Outputs: Error state
+
+
+u8 LED_u8LEDON(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> Turns LED off
+Description: Turns LED ooff
+Inputs : void    
+Outputs: Error state
+
+
+u8 LED_u8LEDOff(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> Initialize blueteooth 
+Description: Initialize Bluetooth to send and receive data serially
+Inputs : void    
+Outputs: Error state
+
+
+u8 BLUETOOTH_Init(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> Bluetooth Send  
+Description: Bluetooth sends data serially through UART communication
+Inputs : character to be send    
+Outputs: Error state
+
+
+u8 BLUETOOTH_u8Send(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==> Bluetooth Receive  
+Description: receiving data serially through UART communication via Bluetooth
+Inputs: character to be send    
+Outputs: Data received 
+
+
+u8 BLUETOOTH_u8Send(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+ 
+
+
+
+ 
+
