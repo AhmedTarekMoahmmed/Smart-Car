@@ -1,0 +1,53 @@
+REQ_CRS_001
+1- 2 motors
+2- motor driver
+3- 4 wheels
+
+REQ_CRS_002
+4- battrey holder
+5- body of the robot (on solid works)
+6- jumbers
+7- rechargable batteries
+
+REQ_CRS_003
+8- atmega32
+9- Ultrasonic sensors 
+10- bluetooth module HC-05
+
+REQ_CRS_004
+11- leds (as warning)
+12- pcb board of atmega32
+
+SW: 
+REQ_CRS_005
+13 android app to control the robot remotely
+
+REQ_CRS_006
+14- USART driver to connect to the app
+
+REQ_CRS_007
+15- Motor Driver (go forward , bachword ..)
+
+REQ_CRS_008
+16- Timers in PWM mode
+
+REQ_CRS_009
+17)
+- USART boadrate should be 9600
+- USART stop bit (one stop bit)
+
+REQ_CRS_010
+- Sending f over USART -> means forward
+- Sending b over USART -> means bachward
+- Sending r over USART -> means turn right
+- Sending l over USART -> means turn left
+- Sending s over USART -> means Stop
+
+REQ_CRS_011
+18- object avoidance using ultrasonic sensors 
+
+REQ_CRS_012
+19- car speed should be .5 m/sec
+
+REQ_CRS_013
+Frequency of sending data over 1/100 msec
